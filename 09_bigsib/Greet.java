@@ -1,11 +1,11 @@
-// Nicole Zhou
+// Team Name: Zooming Xippy Zookeepers (Nicole Zhou, Duck, Jomin Zhang, Chompsky, Kevin Xiao, Mr.Swag
 // APCS
 // HW09 What are BigSibs Good For?
 // 2021-10-03
 
 /*
-Dicoveries:
-Unresolved Questions:
+Dicoveries: To use a method from a different file, you do class.method
+Unresolved Questions: Will this class.method still work if the files are in different directories?
 */
 
 public class Greet {
