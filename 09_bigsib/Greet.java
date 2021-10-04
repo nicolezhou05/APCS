@@ -1,4 +1,4 @@
-// Team Name: Zooming Xippy Zookeepers (Nicole Zhou, Duck, Jomin Zhang, Chompsky, Kevin Xiao, Mr.Swag
+// Team Name: Zooming Xippy Zookeepers (Nicole Zhou, Duck, Jomin Zhang, Chompsky, Kevin Xiao, Mr.Swag)
 // APCS
 // HW09 What are BigSibs Good For?
 // 2021-10-03
