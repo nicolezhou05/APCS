@@ -1,6 +1,6 @@
 // Team Name: Noble Narwhals (Nicole Zhou, Duck, Nakib Abedin, Joker)
-// APCS Where do BigSibs Come From?
-// HW13
+// APCS
+// HW13 Where do BigSibs Come From?
 // 2021-10-6
 
 /*
