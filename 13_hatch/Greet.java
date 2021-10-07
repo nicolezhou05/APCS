@@ -4,7 +4,7 @@
 // 2021-10-6
 
 /*
-DISCO: We found out how what constructors are and how to write them.
+DISCO: We found out what constructors are and how to write them.
 QCC: Why does the constructor need to be private?
 */
 
