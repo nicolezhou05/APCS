@@ -4,8 +4,8 @@
 // 2021-10-6
 
 /*
-DISCO:
-QCC:
+DISCO: We found out how what constructors are and how to write them.
+QCC: Why does the constructor need to be private?
 */
 
 public class Greet {
