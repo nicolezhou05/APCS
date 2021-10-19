@@ -8,7 +8,7 @@ DISCO:
 1) Different logical operators can be used in if statements to make them more efficient, such as && or ==.
 2) If statements require a return statments for all parts of the conditionals, such as else or if else.
 
-QCC
+QCC:
 1) Is there another way to make the toString() method more efficient?
 */
 
@@ -75,11 +75,12 @@ public class BankAccount {
   public void withdraw( double withdrawAmount ) {
     if (withdrawAmount > balance) {
       System.err.println(false + " - account doesn't have enough money.");
-    } else {
+    }
+    else {
       balance = balance - withdrawAmount;
       System.out.println (true + " - withdrawal success");
+    }
   }
-}
 
   //overwritten toString()
   public String toString() {
@@ -93,13 +94,14 @@ public class BankAccount {
     return retStr;
   }
 
-private boolean authenticate( int accNum, String pass ) {
-  if ((accNum == acctNum) && (pass == passwd)) {
-    return (true);
-  } else {
-    return (false);
+  private boolean authenticate( int accNum, String pass ) {
+    if ((accNum == acctNum) && (pass == passwd)) {
+      return (true);
+    }
+    else {
+      return (false);
+    }
   }
-}
 
   //main method for testing
   public static void main( String[] args ) {
@@ -116,8 +118,8 @@ private boolean authenticate( int accNum, String pass ) {
     ba.deposit (200.00);
     ba.withdraw(10000.99);
     System.out.println("Authentication " + ba.authenticate(123456789, "PepeIsGod"));
-//prints full info
-  short pin = 1234;
+  //prints full info
+    short pin = 1234;
     ba.setName("Pepe");
     ba.setPasswd("PepeIsGod");
     ba.setPin(pin);
