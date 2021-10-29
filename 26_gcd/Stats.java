@@ -1,6 +1,7 @@
 // Team: Hydration (Brianna, Pepe, Nicole, Duck)
 // APCS
 // HW26: GCD Three Ways
+// 2021-10-27
 // Time spent: 1 hr
 
 /*
