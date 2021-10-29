@@ -7,9 +7,9 @@
 /*
 DISCO:
 0) s.length outputs the amount of characters in a string.
-1) s.substring(x,y) outputs the char inbetreen the xth and yth index of s.
+1) s.substring(x,y) outputs the char inbetween the xth and yth index of s.
 2) s.substring(x) will assume that you want it to go from index x to the end.
-3) For recursive functinos, you need to avoid initializing variables because those variables will get reset when you make a function call inside of the funtion.
+3) For recursive functions, you need to avoid initializing variables because those variables will get reset when you make a function call inside of the function.
 
 QCC:
 0) What is the best way to design a recursive algorithm?
