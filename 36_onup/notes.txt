@@ -1,0 +1,38 @@
+Nicole Zhou
+APCS
+HW36: All Quacked Up
+2021-11-18
+time spent: 0.8 hr
+
+---------------------------DEBUGGING---------------------------
+
+Compile-time errors: there is something wrong with the syntax of the program
+- Only the first error is truly reliable. Fix one error at a time and then recompile the program
+- Use the information the compiler gives you as a guideline, otherwise broaden the search
+- Balanced parentheses/brackets, uppercase != lowercase, semicolons at the end, right type
+- Make sure the program you are editing is the program the compiler is compiling.
+- Debug by bisection: make backup, delete half of code, compile, repeat
+- Compilers can be wrong
+
+Run-time errors: produced if something goes wrong while the program is running
+- Can figure out things out by adding print statements
+- Hanging: (program stops and seems to be doing nothing) caught in an infinite loop/recursion
+- Infinite loop- add print statement displaying the values of the variables in the condition and the value of the condition (should be false at the end)
+- Infinite recursion- check base case, add print statement at the beginning of the method that displays the parameters
+- Flow of execution- print "entering method methodName", display the arguments each method receives, most common: providing arguments in the wrong order
+- Exception- examine the place in the program where the error occurred
+- Getting buried in output- either simplify the output or simplify the program
+- Find the minimal test case and reorganize the program
+
+Logic errors: cause the program to do the wrong thing
+- Find the section of the code that performs the function
+- Make sure you understand the code
+- Break the program into components and test them separately
+- Integer division goes to zero, use double if you want fractions
+- Floating point numbers are only approximate and you should never use == on double
+- When using ==, check if they are identical. Use equals when checking equivalence
+- Break complex expressions to parts that are easier to read
+
+Walk away for a while if you're really struggling to find the bug or bring have someone else look at it
+What type of bug is occurring?
+Explain the problem to your rubber duck
