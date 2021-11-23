@@ -1,24 +1,36 @@
 public class Protagonist{
-  public int health = 10;
-  private int atkpwr;
+  private String name = "doubleN";
+  public int health;
+  private int attack;
+
+  public Protagonist(){
+    health = 125;
+    attack = 1;
+  }
+
+  public Protagonist(String _name){
+    name = _name;
+  }
+
+  public String getName(){
+    return name;
+  }
 
   public boolean isAlive(){
-    if (health > 0){
-      return true;
-    }
-    return false;
+    return health > 0;
   }
 
   public void specialize(){
-    atkpwr = 4;
-  }
-`
-  public void normalize(){
-    atkpwr = 2;
+    attack = 2;
   }
 
-  public int attack(being){
-    being.health -= atkpwr;
-    return atkpwr;
+  public void normalize(){
+    attack = 1;
+  }
+
+  public int attack(Monster enemy){
+    enemy.health -= attack;
+    return attack;
   }
 }
+

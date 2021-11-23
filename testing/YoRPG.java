@@ -1,4 +1,9 @@
 /**********************************************
+ * Team: doubleN (Nicole Zhou, Duck, Nada Hameed, Ray)
+ * APCS
+ * L01: An Adventurer is You!
+ * 2021-11-22
+
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
  * Required classes: Protagonist, Monster
@@ -13,7 +18,8 @@
  * DISCO:
  *
  * QCC:
- *
+ * 1) What is strength for?
+ * 2) What does extend do and why do we need it?
  **********************************************/
 
 import java.io.*;
@@ -127,11 +133,9 @@ public class YoRPG {
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
 
-        System.out.println( "\n" + pat.getName() + " dealt " + d1 +
-                            " points of damage.");
+        System.out.println( "\n" + pat.getName() + " dealt " + d1 + " points of damage.");
 
-        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
-                            " for " + d2 + " points of damage.");
+        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() + " for " + d2 + " points of damage.");
 	    }//end while
 
 	    //option 1: you & the monster perish
@@ -170,12 +174,13 @@ public class YoRPG {
 
     while( encounters < MAX_ENCOUNTERS ) {
     if ( !game.playTurn() )
-    break;
+      break;
     encounters++;
     System.out.println();
     }
-/*================================================
+
     System.out.println( "Thy game doth be over." );
+    /*================================================
 	  ================================================*/
   }//end main
 

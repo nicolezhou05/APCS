@@ -1,11 +1,19 @@
 public class Monster{
-  public int health = 15;
+  public int health;
+  private int attack;
 
-  public boolean isAlive(){
-    if (health > 0){
-      return true;
-    }
-    return false;
+  public Monster(){
+    health = 150;
+    attack = 2;
   }
 
+  public boolean isAlive(){
+    return health > 0;
+  }
+
+  public int attack(Protagonist enemy){
+    enemy.health -= attack;
+    return attack;
+  }
 }
+
