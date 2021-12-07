@@ -2,6 +2,7 @@
 // APCS
 // HW43: Array of Steel
 // 2021-12-06
+// time spent: 0.7 hr
 
 /*
 DISCO:
