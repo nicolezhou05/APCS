@@ -1,6 +1,6 @@
 // Team: CNN (Nicole Zhou, Duck, Nada Hameed, Ray, Corina Chen, Binktop)
 // APCS
-// HW48 (?)
+// HW48: Halving the Halves
 // 2021-12-15
 // time spent: 0.9 hr
 
