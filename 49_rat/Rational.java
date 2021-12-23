@@ -2,13 +2,15 @@
 // APCS
 // HW49: Rational Standards Compliance
 // 2021-12-22
-// time spent:
+// time spent: 0.7 hr
 
 /*
 DISCO:
-
+1) _Object_ instanceof _Class_ returns a boolean. Can be used in conditionals.
+2) throw new ClassCastException(_str_); returns an error with _str_ label.
+3) instanceof is a is-a.
 QCC:
-
+1) Still confused about objects and more clarification on instanceof is needed.
 */
 
 public class Rational implements Comparable {
@@ -85,15 +87,21 @@ public class Rational implements Comparable {
     denominator = denominator / gcd;
   }
 
-  // However, it changes the calling object
-  public int compareTo(Rational r){
-    subtract(r);
+  // new addition
+  public int compareTo(Object o){
+    if (!(o instanceof Rational)){
+      throw new ClassCastException("\ncompareTo() input not a Rational");
+    }
+    Rational r = (Rational)o;
+    subtract(r); // changes the calling object
     return numerator;
   }
 
-  public int compareTo(Object o){
-    Rational r = (Rational)o;
-    subtract(r);
-    return numerator;
+  public boolean equals(Object o){
+    if (o instanceof Rational){
+      Rational r = (Rational)o;
+      return (numerator * r.denominator) == (denominator * r.numerator);
+    }
+    return false;
   }
 }
