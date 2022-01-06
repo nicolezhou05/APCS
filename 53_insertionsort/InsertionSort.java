@@ -1,15 +1,22 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW53 -- implementing insertion sort
-// 2022-01-06r
-// time spent:  hrs
+// Team: CNN (Corina Chen, Binktop, Nada Hameed, Ray, Nicole Zhou, Duck)
+// APCS
+// HW53: Poker Face
+// 2022-01-05
+// time spent: 0.5 hr
 
 /******************************
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
+ * 1) Separate array into sorted and unsorted region. First element is in sorted region and partition is 1.
+ * 2) Walk an element from unsorted region to where it belongs in sorted region.
+ * 3) Increase size of partition by 1.
+ * 4) Repeat 2-3 until array is completely sorted.
  *
  * DISCO
+ * 1) Insertion Sort: sort one element at a time starting from one end to the other, swapping only adjacent elements
+ * 2) Worst case for insertion sort might be having to sort very large arrays.
+ * 3) Best case is probably sorting an already-sorted array.
  *
  * QCC
  * q0: How many passes to sort n elements?
@@ -23,7 +30,6 @@
  * q4: What must you track?
  * a4: number of partitions
  ******************************/
-
 
 import java.util.ArrayList;
 
@@ -54,33 +60,31 @@ public class InsertionSort{
   }
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
   // VOID version of InsertionSort
   // Rearranges elements of input ArrayList
   // postcondition: data's elements sorted in ascending order
   public static void insertionSortV( ArrayList<Comparable> data ) {
-    for(int partition = 0; partition < data.size() - 1; partition += 1) {
+    for(int partition = 1; partition < data.size(); partition += 1) {
       //partition marks first item in unsorted region
 
       System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
       System.out.println( data );
 
       //traverse sorted region from right to left
-      for(  ) {
-
+      for(int i = partition; i > 0; i -= 1) {
         // "walk" the current item to where it belongs
         // by swapping adjacent items
-        if (  ) {
-
+        if (data.get(i).compareTo(data.get(i - 1)) < 0) {
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
-
+          Comparable bigger = data.get(i - 1);
+          data.set(i - 1, data.get(i));
+          data.set(i, bigger);
         }
         else
           break;
       }
     }
   }//end insertionSortV
-
 
   // ArrayList-returning insertionSort
   // postcondition: order of input ArrayList's elements unchanged
@@ -142,7 +146,5 @@ public class InsertionSort{
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
       ============================================*/
-
   }//end main
-
 }//end class InsertionSort
