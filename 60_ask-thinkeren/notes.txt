@@ -1,0 +1,32 @@
+Team: Benjamin (Brian Wang + Dolphin, Jun Hong Wang + Bob, Nicole Zhou + Duck)
+APCS
+HW60: A Termite is-a Turtle, a Thinker is-a Turtle
+2022-02-07
+time spent: 0.5 hrs
+
+
+DISCO
+------------------------------------------------
+* When sharing, the thinker sharing out the cards do not keep any
+================================================
+
+
+QCC
+------------------------------------------------
+* Are we allowed to look to at the cards when we get them?
+* How are we supposed to end with a sorted deck?
+================================================
+
+
+THINKER FIRMWARE
+------------------------------------------------
+* Raise hand if not in possession of any cards
+* When receiving cards, first determine if sorted or not
+* If not sorted, split the deck to give to 2 other thinkeren (with no cards) and hold out hands to wait for them to give the cards back
+* If sorted, give back the cards to the thinker who had originally gave you the card
+================================================
+
+
+useful links copied from assignments page:
+https://ccl.northwestern.edu/netlogo/models/Termites
+https://www.lifewire.com/what-is-firmware-2625881
