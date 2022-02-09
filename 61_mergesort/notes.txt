@@ -1,0 +1,31 @@
+Team: Benjamin (Brian Wang + Dolphin, Jun Hong Wang + Bob, Nicole Zhou + Duck)
+APCS
+HW61: Instructions so Simple...
+2022-02-08
+time spent: 1.5 hrs
+
+
+DISCO
+------------------------------------------------
+* Thinkeren are allowed to look at the deck
+================================================
+
+
+QCC
+------------------------------------------------
+* What are the best and worst cases?
+================================================
+
+
+THINKER FIRMWARE
+------------------------------------------------
+* Raise hand if not in possession of any cards
+* When receiving cards, look at deck to determine if sorted or not
+* If not sorted, split the deck to give to at most 2 other thinkeren (with no cards) and hold out hands to wait for them to give the cards back
+* If sorted, give back the cards to the thinker who had originally gave you the card
+================================================
+
+
+useful links copied from assignments page:
+https://ccl.northwestern.edu/netlogo/models/Termites
+https://www.lifewire.com/what-is-firmware-2625881
