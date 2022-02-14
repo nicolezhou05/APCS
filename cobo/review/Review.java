@@ -1,3 +1,8 @@
+// TNPG: Benjamin (Jun Hong Wang, Brian Wang, Nicole Zhou)
+// APCS
+// L06: Read/Review/Expand
+// 2022-02-10
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
@@ -163,9 +168,76 @@ public class Review {
     }
   }
 
+  public static double totalSentiment(String fileName){
+    String review = textToString(fileName);
+    double total = 0.0;
+    if (review.length() < 1){
+      return 0.0;
+    }
+    ArrayList<String> reviewArray = new ArrayList();
+    while (review.indexOf(" ") > -1){
+      String word = review.substring(0, review.indexOf(" "));
+      word = removePunctuation(word);
+      word = word.toLowerCase();
+      reviewArray.add(word);
+      review = review.substring(review.indexOf(" ") + 1);
+    }
+    review = removePunctuation(review);
+    reviewArray.add(review);
+    for (String words : reviewArray){
+      total += sentimentVal(words);
+    }
+    return total;
+  }
+
+  public static int starRating(String fileName){
+    double totalSent = totalSentiment(fileName);
+    if (totalSent < -6){
+      return 0;
+    }
+    else if (totalSent < -3){
+      return 1;
+    }
+    else if (totalSent < 0){
+      return 2;
+    }
+    else if (totalSent < 3){
+      return 4;
+    }
+    else {
+      return 5;
+    }
+  }
+
+  public static String fakeReview(String fileName){
+    String review = textToString(fileName);
+    while (review.indexOf("*") > -1){
+      String part = review.substring(review.indexOf("*"));
+      String word = part.substring(0, part.indexOf(" "));
+      word = removePunctuation(word);
+      // word = randomAdjective();
+      if (sentimentVal(word) <= 0){
+        word = randomPositiveAdj();
+      }
+      else {
+        word = randomNegativeAdj();
+      }
+      review = review.substring(0, review.indexOf("*")) + word + part.substring(part.indexOf(" "));
+    }
+    return review;
+  }
+
   public static void main(String[] args){
     System.out.println(sentimentVal("happily"));
     System.out.println(sentimentVal("terrible"));
     System.out.println(sentimentVal("cold"));
+
+    System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println(starRating("SimpleReview.txt"));
+
+    System.out.println(totalSentiment("GoodReview.txt"));
+    System.out.println(starRating("GoodReview.txt"));
+
+    System.out.println(fakeReview("SimpleReview.txt"));
   }
 }
