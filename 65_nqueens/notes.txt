@@ -1,0 +1,18 @@
+Team Benjamin: Jun Hong Wang, Brian Wang, Nicole Zhou
+APCS pd6
+HW65: How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+2022-02-16
+Time Spent: 1.5 hrs
+
+DISCO:
+We thought about a backtracking algorithm, so that we remove queens that cause problems.
+
+QCC:
+How can we make this produce not just one solution for a specific sized chess board?
+As in, can we get all the solutions for a specific sized grid, and how?
+
+How many solutions are there for a specific size grid?
+Is there a formula?
+
+Also, we're not sure if we need to return a false statement in the solve() method, if we should always get a true by backtracking.
+*After further thought, it will have to return false for small boards (4 or lower?).
