@@ -136,28 +136,41 @@ class MazeSolver
     delay( FRAME_DELAY ); //slow it down enough to be followable
 
     //primary base case
-    if ( ??? ) {
-	???
+    if ( _solved ) {
+      for (int i = 0; i < w; i++){
+        for (int j = 0; j < h; j++){
+          if (_maze[i][j] == HERO){
+            _maze[i][j] = VISITED_PATH;
+          }
+        }
+      }
+      System.exit(0);
     }
     //other base cases
-    else if ( ??? ) {
-	???
+    else if (_maze[x][y] == EXIT){
+      _solved = true;
+    }
+    else if ( _maze[x][y] != PATH) {
       return;
     }
     //otherwise, recursively solve maze from next pos over,
     //after marking current location
     else {
-	???
+      _maze[x][y] = HERO;
       System.out.println( this ); //refresh screen
 
-???
+      solve(x-1, y); //left
+      solve(x+1, y); //right
+      solve(x, y-1); //top
+      solve(x, y+1); //bottom
+      _maze[x][y] = VISITED_PATH;
       System.out.println( this ); //refresh screen
     }
   }
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-
+    return _maze[x][y] == '#';
   }
 
 }//end class MazeSolver
@@ -188,8 +201,8 @@ public class Maze
 
     //drop hero into the maze (coords must be on path)
     // ThinkerTODO: comment next line out when ready to randomize startpos
-    ms.solve( 4, 3 );
-
+    //ms.solve( 4, 3 );
+    ms.solve( 4, 7 );
     //drop our hero into maze at random location on path
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
     //ms.solve( startX, startY );
