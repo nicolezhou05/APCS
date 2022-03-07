@@ -38,7 +38,7 @@ class MazeSolver
   final private int FRAME_DELAY = 50;
 
   private char[][] _maze;
-  private int h, w; // height, width of maze
+  public int h, w; // height, width of maze
   private boolean _solved;
 
   //~~~~~~~~~~~~~  L E G E N D  ~~~~~~~~~~~~~
@@ -97,7 +97,7 @@ class MazeSolver
   public String toString()
   {
     //send ANSI code "ESC[0;0H" to place cursor in upper left
-    String retStr = "[0;0H";
+    String retStr = " [0;0H";
     //emacs shortcut: C-q, ESC
     //emacs shortcut: M-x quoted-insert, ESC
 
@@ -170,7 +170,7 @@ class MazeSolver
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-    return _maze[x][y] == '#';
+    return _maze[x][y] == PATH;
   }
 
 }//end class MazeSolver
@@ -180,6 +180,8 @@ public class Maze
 {
   public static void main( String[] args )
   {
+    int startX = 1;
+    int startY = 1;
     String mazeInputFile = null;
 
     try {
@@ -202,10 +204,14 @@ public class Maze
     //drop hero into the maze (coords must be on path)
     // ThinkerTODO: comment next line out when ready to randomize startpos
     //ms.solve( 4, 3 );
-    ms.solve( 4, 7 );
+    //ms.solve( 4, 7 );
     //drop our hero into maze at random location on path
+    while (ms.onPath(startX, startY) == false) {
+      startX = (int) (Math.random() * ms.h);
+      startY = (int) (Math.random() * ms.w);
+    }
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    //ms.solve( startX, startY );
+    ms.solve( startX, startY );
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
