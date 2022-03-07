@@ -2,7 +2,7 @@
 // APCS
 // HW70: Thinkers of the Corn
 // 2022-03-03
-// time spent: hr
+// time spent: 0.5 hr
 
 /***
  * SKEELTON for
@@ -16,15 +16,18 @@
  *
  * ALGORITHM for finding exit from starting position:
  *  <INSERT YOUR SUMMARY OF ALGO HERE>
- * 1. At the starting position, check the cell's surroundings for the next empty cell.
- * 2. Once the next empty cell is found, move to it.
- * 3. Repeat, marking each cell as the "character" travels.
+ * 0) At the starting position, check the cell's surroundings for the next empty cell.
+ * 1) Once the next empty cell is found, move to it.
+ * 2) Repeat, marking each cell as the "character" travels.
  *    a) Once the "character" hits a dead end, backtrack and repeat the above steps.
- * 4. If the "character" reaches the end, the maze's solution has been found.
+ * 3) If the "character" reaches the end, the maze's solution has been found.
  *
  * DISCO
+ * 0) Just "return" allows you to exit the method
+ * 1) System.exit(0) exits a program. 0 represents a "sucessful, normal exit" (according to piazza @476)
  *
  * QCC
+ * 0) What represents an unsuccessful exit in System.out() and what does it look like when that happens?
  *
  ***/
 
@@ -33,12 +36,11 @@ import java.io.*;
 import java.util.*;
 
 
-class MazeSolver
-{
+class MazeSolver{
   final private int FRAME_DELAY = 50;
 
   private char[][] _maze;
-  public int h, w; // height, width of maze
+  private int h, w; // height, width of maze
   private boolean _solved;
 
   //~~~~~~~~~~~~~  L E G E N D  ~~~~~~~~~~~~~
@@ -49,8 +51,7 @@ class MazeSolver
   final private char VISITED_PATH =   '.';
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  public MazeSolver( String inputFile )
-  {
+  public MazeSolver( String inputFile ){
     // init 2D array to represent maze
     // (80x25 is default terminal window size)
     _maze = new char[80][25];
@@ -94,10 +95,9 @@ class MazeSolver
   /**
    * "stringify" the board
    **/
-  public String toString()
-  {
+  public String toString(){
     //send ANSI code "ESC[0;0H" to place cursor in upper left
-    String retStr = " [0;0H";
+    String retStr = "[0;0H";
     //emacs shortcut: C-q, ESC
     //emacs shortcut: M-x quoted-insert, ESC
 
@@ -116,8 +116,7 @@ class MazeSolver
    * helper method to keep try/catch clutter out of main flow
    * @param n      delay in ms
    **/
-  private void delay( int n )
-  {
+  private void delay( int n ){
     try {
       Thread.sleep(n);
     } catch( InterruptedException e ) {
@@ -131,8 +130,7 @@ class MazeSolver
    * @param x starting x-coord, measured from left
    * @param y starting y-coord, measured from top
    **/
-  public void solve( int x, int y )
-  {
+  public void solve( int x, int y ){
     delay( FRAME_DELAY ); //slow it down enough to be followable
 
     //primary base case
@@ -170,18 +168,14 @@ class MazeSolver
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-    return _maze[x][y] == PATH;
+    return _maze[x][y] == '#';
   }
 
 }//end class MazeSolver
 
 
-public class Maze
-{
-  public static void main( String[] args )
-  {
-    int startX = 1;
-    int startY = 1;
+public class Maze{
+  public static void main( String[] args ){
     String mazeInputFile = null;
 
     try {
@@ -204,14 +198,10 @@ public class Maze
     //drop hero into the maze (coords must be on path)
     // ThinkerTODO: comment next line out when ready to randomize startpos
     //ms.solve( 4, 3 );
-    //ms.solve( 4, 7 );
+    ms.solve( 4, 7 );
     //drop our hero into maze at random location on path
-    while (ms.onPath(startX, startY) == false) {
-      startX = (int) (Math.random() * ms.h);
-      startY = (int) (Math.random() * ms.w);
-    }
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    ms.solve( startX, startY );
+    //ms.solve( startX, startY );
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
