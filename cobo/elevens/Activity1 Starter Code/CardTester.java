@@ -9,5 +9,9 @@ public class CardTester {
 	 */
 	public static void main(String[] args) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+
+		Card test0 = new Card("Jack", "Hearts", 11);
+		Card test1 = new Card("Three", "Spade", 3);
+		Card test2 = new Card("Seven", "Diamonds", 7);
 	}
 }
