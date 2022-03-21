@@ -93,7 +93,7 @@ public class Card {
 	@Override
 	public String toString() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		String str = rank + " of " + suit + "(point value = " + pointValue + ")";
+		String str = rank + " of " + suit + " (point value = " + pointValue + ")";
 		return str;
 	}
 }

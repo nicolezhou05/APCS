@@ -11,7 +11,14 @@ public class CardTester {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
 
 		Card test0 = new Card("Jack", "Hearts", 11);
-		Card test1 = new Card("Three", "Spade", 3);
+		Card test1 = new Card("Jack", "Hearts", 11);
 		Card test2 = new Card("Seven", "Diamonds", 7);
+
+		System.out.println(test0);
+		System.out.println(test1);
+		System.out.println(test2);
+
+		System.out.println(test0.matches(test1));
+		System.out.println(test0.matches(test2));
 	}
 }
