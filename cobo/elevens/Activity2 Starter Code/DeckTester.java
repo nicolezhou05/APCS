@@ -10,8 +10,8 @@ public class DeckTester {
 	public static void main(String[] args) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		String[] ranks0 = {"one", "two", "three"};
-		String[] suits0 = {"hearts", "club", "spades"};
-		int[] values0 = {6, 5, 4};
+		String[] suits0 = {"hearts", "club"};
+		int[] values0 = {1, 2, 3};
 
 		System.out.println("---------First Deck---------");
 		Deck deck0 = new Deck(ranks0, suits0, values0);
@@ -37,9 +37,9 @@ public class DeckTester {
 		System.out.println();
 
 
-		String[] ranks2 = {"one", "one", "one"};
-		String[] suits2 = {"hearts", "hearts", "hearts"};
-		int[] values2 = {8, 8, 8};
+		String[] ranks2 = {"one"};
+		String[] suits2 = {"hearts", "spades", "clubs"};
+		int[] values2 = {1};
 
 		System.out.println("---------Third Deck---------");
 		Deck deck2 = new Deck(ranks2, suits2, values2);
