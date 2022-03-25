@@ -1,0 +1,14 @@
+Team: Minions (Melody Lew, Nicole Zhou, Nora Miller)
+APCS pd06
+HW80: Generically Speaking
+2022-03-23
+time spent: 0.5 hr
+
+DISCO:
+0) T is a placeholder
+1) We don't need to define what T is
+2) We need to edit the interface first
+
+QCC:
+0) What is <> used for?
+1) How do I exactly deal with the error message "Object cannot be converted to T"?

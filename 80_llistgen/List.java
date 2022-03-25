@@ -2,7 +2,7 @@
 // APCS pd06
 // HW80: Generically Speaking
 // 2022-03-23
-// time spent: hr
+// time spent: 0.5 hr
 
 /***
  * interface List

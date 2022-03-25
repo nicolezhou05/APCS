@@ -2,17 +2,17 @@
 // APCS pd06
 // HW80: Generically Speaking
 // 2022-03-23
-// time spent: hr
+// time spent: 0.5 hr
 
 
-public class DLLNode{
+public class DLLNode<T>{
   //instance vars
   private T _cargo;
-  private DLLNode _nextNode;
-  private DLLNode _prevNode;
+  private DLLNode<T> _nextNode;
+  private DLLNode<T> _prevNode;
 
   // constructor
-  public DLLNode( T value, DLLNode next, DLLNode prev ){
+  public DLLNode( T value, DLLNode<T> next, DLLNode<T> prev ){
     _cargo = value;
     _nextNode = next;
     _prevNode = prev;
@@ -24,11 +24,11 @@ public class DLLNode{
     return _cargo;
   }
 
-  public DLLNode getNext(){
+  public DLLNode<T> getNext(){
     return _nextNode;
   }
 
-  public DLLNode getPrev(){
+  public DLLNode<T> getPrev(){
     return _prevNode;
   }
   //--------------^  ACCESSORS  ^--------------
@@ -41,56 +41,17 @@ public class DLLNode{
     return foo;
   }
 
-  public DLLNode setNext( DLLNode newNext ){
-    DLLNode foo = getNext();
+  public DLLNode<T> setNext( DLLNode<T> newNext ){
+    DLLNode<T> foo = getNext();
     _nextNode = newNext;
     return foo;
   }
 
-  public DLLNode setPrev( DLLNode newPrev ){
-    DLLNode foo = getPrev();
+  public DLLNode<T> setPrev( DLLNode<T> newPrev ){
+    DLLNode<T> foo = getPrev();
     _prevNode = newPrev;
     return foo;
   }
   //--------------^  MUTATORS  ^--------------
 
-
-  // override inherited toString
-  public T toString(){
-    return _cargo;
-  }
-
-
-  //main method for testing
-  public static void main( String[] args ){
-
-    //Below is an exercise in creating a linked list...
-
-    //Create a node
-    DLLNode first = new DLLNode( "cat", null, null );
-
-    //Create a new node after the first
-    first.setNext( new DLLNode( "dog", null, null ) );
-
-    //Create a third node after the second
-    first.getNext().setNext( new DLLNode( "cow", null, null ) );
-
-    /* A naive list traversal, has side effects.... ??
-       while( first != null ) {
-       System.out.println( first );
-       first = first.getNext();
-       }
-    */
-
-    //Q: when head ptr moves to next node in list, what happens to the node it just left?
-    //A: It is forgotten so you can no longer go back to it.
-
-    //...so better: ?
-    DLLNode temp = first;
-    while( temp != null ) {
-      System.out.println( temp );
-      temp = temp.getNext();
-    }
-
-  }//end main
-}//end class DLLNode
+}//end class DLLNode<T>
