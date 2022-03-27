@@ -1,3 +1,9 @@
+// Minions: Melody Lew, Nora Miller, Nicole Zhou
+// APCS pd 06
+// HW82 -- Roll Your Own Iterator
+// 2022-03-28
+// time spent: 2.0 hrs
+
 /***
  * class LList v6
  * Implements a linked list of DLLNodes.
@@ -10,6 +16,11 @@ import java.util.NoSuchElementException;
 
 
 public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
+
+// A. List extends the functionality of Iterable
+// A2. If we were to say it implements Iterable, since there's no file named
+//     Iterable, it would implement the actual Java interface Iterable.
+
 {
   // Your List.java must be in same dir to supersede
   // built-in Java List interface
@@ -152,9 +163,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public /* YOUR CODE HERE */
-  {
+  public MyIterator iterator() {
     /* YOUR CODE HERE */
+    return new MyIterator();
   }
 
   //--------------------------------------------------------
@@ -255,6 +266,8 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     public MyIterator()
     {
       /* YOUR CODE HERE */
+      _dummy = _head;
+      _okToRemove = false;
     }
 
     //-----------------------------------------------------------
@@ -262,7 +275,10 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return true if iteration has more elements.
     public boolean hasNext()
     {
-      /* YOUR CODE HERE */
+      if (_dummy.equals(_tail)){
+        return false;
+      }
+      return true;
     }
 
 
@@ -270,6 +286,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     public T next()
     {
       /* YOUR CODE HERE */
+      T temp = _dummy.getNext().getCargo();
+      _okToRemove = true;
+      return temp;
     }
 
 
@@ -277,8 +296,16 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //postcondition: maintains invariant that _dummy always points to a node
     //               (...so that hasNext() will not crash)
     public void remove()
-    {
-            /* YOUR CODE HERE */
+    { // what are we trying to remove?
+
+      /* YOUR CODE HERE */
+      if (_okToRemove){
+        DLLNode<T> tmp = _dummy.getPrev();
+        _dummy.setNext(_dummy.getNext());
+        tmp.setNext(_dummy);
+        _dummy.setPrev(tmp);
+      }
+      _okToRemove = false;
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
@@ -289,7 +316,6 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println("initially: " );
@@ -332,6 +358,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
