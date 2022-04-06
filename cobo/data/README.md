@@ -2,10 +2,7 @@
 ### Corina Chen, Jing Yi Feng, Nicole Zhou
 
 #### Experience with this lab:
-
-#### Activity 3
-1. The temperature at Atlanta, Hartsfield - Jackson Atlanta International Airport, GA is 61.0F
-2. KNYC; The temperature at New York City, Central Park, NY is 46.0F
+Overall, pretty okay but fetch was a bit unfamilar.
 
 Links:
 * https://w1.weather.gov/xml/current_obs/

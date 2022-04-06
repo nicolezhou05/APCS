@@ -1,3 +1,8 @@
+// Team: Non-Disclosure Agreement (Corina Chen, Jing Yi Feng, Nicole Zhou)
+// APCS
+// LAB08: America's Next Top Data Scientist
+// 2022-04-05
+
 /*
  Represents information about a NWS weather station
 */
@@ -27,16 +32,12 @@ public class WeatherStation {
       return name;
    }
 
-   /* Determine if this weather station is located in the given state */
-   public boolean isLocatedInState(String st) {
-      return this.state.equals(st);
-   }
-
    public double getLat(){
      return lat;
    }
 
-   public double getLng(){
-     return lng;
+   /* Determine if this weather station is located in the given state */
+   public boolean isLocatedInState(String st) {
+      return this.state.equals(st);
    }
 }

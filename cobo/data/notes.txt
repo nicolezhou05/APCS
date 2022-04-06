@@ -2,18 +2,25 @@ Team: Non-Disclosure Agreement (Corina Chen, Jing Yi Feng, Nicole Zhou)
 APCS
 LAB08: America's Next Top Data Scientist
 2022-04-05
-time spent: hr
+time spent: 3 hrs
 
 
 DISCO
-0)
+0) javac -classpath .:../sinbad.jar -d . Driver.java does not work for all operating systems.
+1) printUsageString() shows the available data labels
+2) When using fetch(), first parameter should be the name of the constructor. The rest of the parameters should correspond to the parameters of the constructor we are using.
+3) If the first parameter inside fetch() does not match the name of the constructor we are using, we will get an error.
 
 QCC
-0)
+0) We see fetch(), (fetchList(), fetchArray(), fetchString(), etc. How are these different from each other and when do we know when to use which?
 
 <Non-Disclosure Agreement>'s CSV FLOW:
 <insert your description of your tools and workflow in creating, editing CSV files>
-
+0) duckies and members from the trio
+1) computers and the tutorial that explains some parts of sinbad.jar
 
 TRUBZ
 <this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+0) "javac -classpath .:../sinbad.jar -d . Driver.java" --- it took a long time to figure out what was wrong with this
+1) fetch() was something new
+2) Using data labels from printUsageString()

@@ -25,15 +25,17 @@ public class Welcome03_List {
       System.out.println("Stations in " + state);
       for (WeatherStation ws : allstns) {
          if (ws.isLocatedInState(state)) {
-            System.out.println("  " + ws.getId() + ": " + ws.getName() + " Latitude: " + ws.getLat() + " Longitude: " + ws.getLng());
+            System.out.println("  " + ws.getId() + ": " + ws.getName());
          }
       }
 
-
-      for (WeatherStation ws : allstns) {
-         if (ws.getLat) {
-            System.out.println("  " + ws.getId() + ": " + ws.getName() + " Latitude: " + ws.getLat() + " Longitude: " + ws.getLng());
-         }
+      // station that is furthest south out of all the states, not in a specific state
+      WeatherStation southest = allstns.get(0);
+      for (WeatherStation ws : allstns){
+        if (ws.getLat() < southest.getLat()){
+          southest = ws;
+        }
       }
+      System.out.println("The weather station that is furthest south is " + southest.getId() + " with latitude " + southest.getLat());
    }
 }
