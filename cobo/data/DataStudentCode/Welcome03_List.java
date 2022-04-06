@@ -25,7 +25,14 @@ public class Welcome03_List {
       System.out.println("Stations in " + state);
       for (WeatherStation ws : allstns) {
          if (ws.isLocatedInState(state)) {
-            System.out.println("  " + ws.getId() + ": " + ws.getName());
+            System.out.println("  " + ws.getId() + ": " + ws.getName() + " Latitude: " + ws.getLat() + " Longitude: " + ws.getLng());
+         }
+      }
+
+
+      for (WeatherStation ws : allstns) {
+         if (ws.getLat) {
+            System.out.println("  " + ws.getId() + ": " + ws.getName() + " Latitude: " + ws.getLat() + " Longitude: " + ws.getLng());
          }
       }
    }
