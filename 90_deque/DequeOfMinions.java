@@ -1,15 +1,15 @@
 // Minions: Melody Lew, Nora Miller, Nicole Zhou
 // APCS pd06
-// HW90 -- Swabbing the Deque
+// HW90/91 -- Swabbing the Deque/Deque the Halls
 // 2022-04-12
 // time spent: 0.6 hrs
 
 import java.util.LinkedList;
 
-public class YourImplementationOfDeque<Card> implements Deque<Card>{
+public class DequeOfMinions<Card> implements Deque<Card>{
   private LinkedList<Card> _contents;
 
-  public YourImplementationOfDeque(){
+  public DequeOfMinions(){
     _contents = new LinkedList<Card>();
   }
 
@@ -47,16 +47,5 @@ public class YourImplementationOfDeque<Card> implements Deque<Card>{
       retVal += i + " ";
     }
     return retVal;
-  }
-
-  public static void main(String[] args) {
-    Deque<String> sentence = new YourImplementationOfDeque<String>();
-    sentence.addLast("I");
-    sentence.addLast("saw");
-    sentence.addFirst("Yesterday");
-    System.out.println(sentence);
-    System.out.println("size?\t" + sentence.size());
-    System.out.println("first element?\t" + sentence.peekFirst());
-    System.out.println("last element?\t" + sentence.peekLast());
   }
 }
