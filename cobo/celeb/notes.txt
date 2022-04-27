@@ -2,10 +2,10 @@ TNPG: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
 APCS
 L09: Some Folks Call It A Charades
 2022-04-26
-time spent:
+time spent: 3.8 hrs
 
 DISCO:
-0)
+0) equalsIgnoreCase() compares two strings, ignoring capitalization. Returns true if the strings have the same characters. False otherwise.
 
 QCC:
-0) How does the method equalsIgnoreCase() work?
+0) Check to make sure your Constructor is working properly before you move on.

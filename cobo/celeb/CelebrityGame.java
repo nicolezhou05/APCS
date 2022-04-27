@@ -2,7 +2,7 @@
 // APCS
 // L09: Some Folks Call It A Charades
 // 2022-04-26
-// time spent:
+// time spent: 3.8 hrs
 
 import java.util.ArrayList;
 
@@ -21,7 +21,7 @@ public class CelebrityGame
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
-	 CelebrityFrame gameWindow;
+	 private CelebrityFrame gameWindow;
 
 	/**
 	 * The ArrayList of Celebrity values that make up the game
@@ -61,8 +61,17 @@ public class CelebrityGame
 	public boolean processGuess(String guess)
 	{
 		guess = guess.trim();
-		guess.equalsIgnoreCase(); //?
-		return gameCelebrity.getAnswer() == guess;
+		boolean yourGuess = guess.equalsIgnoreCase(gameCelebrity.getAnswer());
+		if (yourGuess){
+			celebGameList.remove(gameCelebrity);
+			if (celebGameList.size() == 0){
+				gameCelebrity = new Celebrity("", "");
+			}
+			else{
+				gameCelebrity = celebGameList.get(0);
+			}
+		}
+		return yourGuess;
 	}
 
 	/**
@@ -136,7 +145,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return null;
+		return gameCelebrity.getClue();
 	}
 
 	/**
@@ -147,6 +156,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return gameCelebrity.getAnswer();
 	}
 }

@@ -2,7 +2,7 @@
 // APCS
 // L09: Some Folks Call It A Charades
 // 2022-04-26
-// time spent: 
+// time spent: 3.8 hrs
 
 /**
  * Celebrity base class for the Celebrity game.
@@ -14,12 +14,18 @@ public class Celebrity
 	/**
 	 * The clue to determine the celebrity
 	 */
-	 private String _clue;
+	 String _clue;
 
 	/**
 	 * The answer or name of the celebrity.
 	 */
+
 	 private String _name;
+
+	 public Celebrity(){
+		 _clue = null;
+		 _name = null;
+	 }
 
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
@@ -28,8 +34,8 @@ public class Celebrity
 	 */
 	public Celebrity(String answer, String clue)
 	{
-		answer = _name;
-		clue = _clue;
+		_name = answer;
+		_clue = clue;
 	}
 
 	/**
