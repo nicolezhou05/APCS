@@ -8,4 +8,4 @@ DISCO:
 0)
 
 QCC:
-0)
+0) How does the method equalsIgnoreCase() work?
