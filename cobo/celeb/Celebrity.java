@@ -1,3 +1,9 @@
+// TNPG: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+// APCS
+// L09: Some Folks Call It A Charades
+// 2022-04-26
+// time spent: 
+
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen

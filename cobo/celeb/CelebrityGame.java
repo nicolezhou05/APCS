@@ -1,3 +1,9 @@
+// TNPG: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+// APCS
+// L09: Some Folks Call It A Charades
+// 2022-04-26
+// time spent:
+
 import java.util.ArrayList;
 
 /**
@@ -22,7 +28,9 @@ public class CelebrityGame
 	 */
 	 private ArrayList<Celebrity> celebGameList;
 
+	 // current Celebrity used in the game
 	 private Celebrity gameCelebrity;
+
 
 	/**
 	 * Builds the game and starts the GUI
@@ -62,7 +70,10 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-
+		if (celebGameList != null && celebGameList.size() > 0){
+			this.gameCelebrity = celebGameList.get(0);
+			gameWindow.replaceScreen("GAME");
+		}
 	}
 
 	/**
@@ -77,7 +88,8 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-
+		Celebrity newCeleb = new Celebrity(name, guess);
+		celebGameList.add(newCeleb);
 	}
 
 	/**
@@ -88,8 +100,7 @@ public class CelebrityGame
 	public boolean validateCelebrity(String name)
 	{
 		name = name.trim();
-		// if (name.length)
-		return false;
+		return name.length() >= 4;
 	}
 
 	/**
@@ -101,7 +112,8 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		return false;
+		clue = clue.trim();
+		return clue.length() >= 10;
 	}
 
 	/**
