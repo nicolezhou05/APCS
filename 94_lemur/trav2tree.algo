@@ -48,7 +48,7 @@ A: Every single output can correspond to an input.
 
 ALGO for Pre-order and In-order
 ------------------------------------------------
-givens: pre-order and in-order transversals of the tree
+givens: pre-order and in-order traversals of the tree
 
 procedure:
 0) First node of pre-order is root.
@@ -62,7 +62,7 @@ procedure:
 
 ALGO for Post-order and In-order
 ------------------------------------------------
-givens: post-order and in-order transversals of the tree
+givens: post-order and in-order traversals of the tree
 
 procedure:
 0) Last node of pre-order is root.
