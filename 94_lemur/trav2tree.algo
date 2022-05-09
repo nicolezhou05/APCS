@@ -1,0 +1,56 @@
+Non-Disclosure Agreement :: Jing Feng, Corina Chen, Nicole Zhou
+APCS pd6
+HW94 -- reverse engineering
+2022-05-06
+time spent:  hrs
+
+
+DISCO
+------------------------------------------------
+*
+================================================
+
+
+QCC
+------------------------------------------------
+*
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: 1
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: If it is possible to form a tree, there is at least one unique tree
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: 
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A:
+
+Q: What does "1-to-1" mean?
+A:
+
+Q: What does "onto" mean?
+A:
+
+================================================
+
+
+ALGO for ____
+------------------------------------------------
+givens:
+
+procedure:
+
+================================================
+(replicate the algo section above as many times as necessary for distinct algos)

@@ -2,7 +2,7 @@ Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
 APCS pd6
 HW93 -- exploring tree properties, extracting actionable intel from traversals
 2022-05-05
-time spent:  hrs
+time spent: 0.7 hrs
 
 
 DISCO
@@ -18,29 +18,29 @@ DISCO
 
 QCC
 ------------------------------------------------
-* what does the question "Is the man who is tall happy" mean? I looked at pizza post about it but the video was restricted.
+* what does the question "Is the man who is tall happy" mean? I looked at piazza post about it but the video was restricted.
 ================================================
 
 
 SELF-ASSESSMENT PROMPTS
 ------------------------------------------------
 In which direction does a tree grow?
-It always grow downwards.
+It always grows downwards.
 
 Provide as many alternate definitions as you can for "tree," using graph terminology ("closed/open tours", "paths", "cycles", etc). Maximize clarity, succinctness.
 A tree is a graph of nodes connected through paths.
 
 Why is a balanced tree allowed a difference of 1 in height between right and left subtrees?
-
+So the tree isn’t one-sided.
 
 Alternate (equivalent, but more succinct?) definitions of "balanced" tree?
 The heights of each node in the same level should differ by 1 or less.
 
 Is a perfect tree complete?
-Yes, because in both types of trees, every level is filled in. However, complete trees have the possiblity of not having the bottom filled in.
+Yes, because in both types of trees, every level is filled in. However, complete trees have the possibility of not having the bottom filled in.
 
 Is a complete tree balanced?
-Yes, because every level of a complete tree filled in (except will the possiblity of the bottom), so the heights of left and right subtrees of any node differ by less than 1.
+Yes, because every level of a complete tree is filled in (except with the possibility of the bottom), so the heights of left and right subtrees of any node differ by less than 1.
 
 Is the Man Who Is Tall Happy?
 (Not exactly sure what this question is asking)
@@ -53,7 +53,9 @@ Every level is full.
 C'EST POSSIBLE?
 ------------------------------------------------
 < your explanation of whether the tree reconstruction challenge given in class is achievable or not >
-Yes, no root has no left subree
+Yes, no root has no left subtree
+
+
        E
         \
          G
