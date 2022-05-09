@@ -2,18 +2,18 @@ Non-Disclosure Agreement :: Jing Feng, Corina Chen, Nicole Zhou
 APCS pd6
 HW94 -- reverse engineering
 2022-05-06
-time spent:  hrs
+time spent: 0.7 hrs
 
 
 DISCO
 ------------------------------------------------
-*
+* Algo for pre/in and post/in are pretty similar
 ================================================
 
 
 QCC
 ------------------------------------------------
-*
+* Is there a better method than just using trial and error?
 ================================================
 
 
@@ -32,25 +32,44 @@ Q: For a given traversal, how many unique trees could have produced it?
 A: If it is possible to form a tree, there is at least one unique tree
 
 Q: Given a pre-order traversal, what can you infer about its tree?
-A: 
+A: First node is the root.
 
 Q: Given a post-order traversal, what can you infer about its tree?
-A:
+A: Last node is the root.
 
 Q: What does "1-to-1" mean?
-A:
+A: Each input corresponds to one output. Each output corresponds to one input.
 
 Q: What does "onto" mean?
-A:
+A: Every single output can correspond to an input.
 
 ================================================
 
 
-ALGO for ____
+ALGO for Pre-order and In-order
 ------------------------------------------------
-givens:
+givens: pre-order and in-order transversals of the tree
 
 procedure:
+0) First node of pre-order is root.
+1) Nodes left of root in in-order are the root's left subtree.
+2) Nodes right of root in in-order are the root's right subtree.
+3) Pre-order: parent, left (check any child first), right
+4) In-order: left, parent, right
+5) Use trial and error.
+================================================
 
+
+ALGO for Post-order and In-order
+------------------------------------------------
+givens: post-order and in-order transversals of the tree
+
+procedure:
+0) Last node of pre-order is root.
+1) Nodes left of root in in-order are the root's left subtree.
+2) Nodes right of root in in-order are the root's right subtree.
+3) Post-order: left, right, parent
+4) In-order: left, parent, right
+5) Use trial and error.
 ================================================
 (replicate the algo section above as many times as necessary for distinct algos)
