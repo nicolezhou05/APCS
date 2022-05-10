@@ -1,0 +1,16 @@
+Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+APCS pd6
+HW95: Algorithm as Data Structure
+2022-05-09
+time spent: 0.7 hrs
+
+DISCO:
+0) The code for each of the orders are pretty similar, just the placement of the SOP differs.
+
+QCC:
+0) What happens when you don't call a method private, public, etc. (just the return type and name of method)
+
+L = level, d = depth, h = height...
+1) a perfect binary tree has (2^h - 1) nodes
+2) at each level, a perfect binary tree has 2^L nodes
+3) height of a complete binary tree with n nodes is log_2 (n)
