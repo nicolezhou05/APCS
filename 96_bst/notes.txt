@@ -1,0 +1,12 @@
+Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+APCS pd6
+HW96: BSTs is the Perfect Place for Shade
+2022-05-10
+time spent: 1.6 hrs
+
+DISCO:
+0) Helper methods are extremely useful, especially when you are trying to use recursion.
+1) Hardest part in a recursive method is probably the base case.
+
+QCC:
+0) Is there a better way of writing the height helper method?
