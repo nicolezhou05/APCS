@@ -1,0 +1,13 @@
+Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+APCS pd6
+HW97: Prune Your Tree
+2022-05-11
+time spent: 2.5 hrs
+
+DISCO:
+0) For cases other than removing a leaf, we can just use setValue().
+1) For nodes with only one child, we also need to consider which side has the child.
+
+QCC:
+0) How do we deal with multiple nodes that have the same value?
+1) How are we supposed to piggyback?
