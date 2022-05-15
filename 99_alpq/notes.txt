@@ -2,4 +2,10 @@ Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
 APCS
 HW99: Some Are More Equal Than Others, Codified
 2022-05-13
-time spent: hrs
+time spent: 0.6 hrs
+
+DISCO:
+0) We should take account of VIPness while adding to the queue, because by doing so, both peekMin() and removeMin() will have lower time complexities.
+
+QCC:
+0) What are the best time complexities for each method?
