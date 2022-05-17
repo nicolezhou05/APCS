@@ -1,0 +1,16 @@
+Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+APCS
+HW101: Heap o'Trouble
+2022-05-16
+time spent: 0.5 hr
+
+0) When adding values and it has traversed to a node without children, the value gets a left or right node. (Does not matter)
+  - However, if there is a child, the value goes to the left or right with respect to the other child. Greater to the right, lesser to the left.
+
+1) If the added value is greater than the root, traverse down the greater side. If the value is less than the child, it will replace the original child.
+
+2) Is the added value less than the root?
+  - If it is, replace that as the root, pushing the previous root down as its children.
+    - Left or right does not matter if the previous root does not have children yet.
+    - If the previous root has a child, place the root on the left because it will always be less than its child.
+    - If there are two children, do as 1.

@@ -1,0 +1,12 @@
+Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+APCS
+HW101: Heap o'Trouble
+2022-05-16
+time spent: 0.5 hr
+
+DISCO:
+0)
+
+QCC:
+0) What do we do if there is a number less than or equal to the root?
+1) What are the uses for heap?

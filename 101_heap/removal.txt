@@ -1,0 +1,8 @@
+Team: Non-Disclosure Agreement (Jing Feng, Corina Chen, Nicole Zhou)
+APCS
+HW101: Heap o'Trouble
+2022-05-16
+time spent: 0.5 hr
+
+0) Travel down a path to find the number. If none exists, travel down the other route until it is found, or return -1 if it doesn't exist.
+1) Replace the removed node with the lesser of its two children.
