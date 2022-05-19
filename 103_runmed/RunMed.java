@@ -2,7 +2,7 @@
 // APCS
 // HW103: Erica's Friends, Hugo, and The One in the Middle
 // 2022-05-18
-// time spent:  hrs
+// time spent: 1.5 hrs
 
 /*
 ALGO:
